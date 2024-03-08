@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}
+body{
+    font-family: Tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Sección header */
+#header {
+    background-color: lightskyblue;
+    border: 2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*Horizontal*/
+    align-items: center; /*Vertical*/
+    grid-area: header; /*Nombre contenedor css grid */
+}
+ul{
+    padding: 0;
+    margin: 0 1px;
+}
+lista{
+    list-style: none; /*Quita viñetas*/
+    margin: 0.5px;
+    font: bold 12px verdana;
+}
+a{
+    color: white;
+    text-decoration: none; /*Quita subrayado*/
+}
+/* Sección estilos nav barra menu */
+#menu{
+    grid-area: nav; /*Nombre contenedor css grid*/
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* Seccion estilos barra submenu */
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color: lightsalmon;
+    transition: all .3s;
+}   /*Evento Css al pasar el mouse*/
+.submenu{
+    position: absolute;
+    background: blue;
+    width: 120%;
+    display: none;  /*Se mantiene oculto por defecto*/
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{ /*Evento de mostrar el submenu al pasar mouse*/
+    display: block;
+    z-index: 100; /*Capa superiór en pagina web*/
+}
+/* Sección de estilos buscarbox */
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: ease 0.8s;
+}
+.buscarbox input:hover{ /*Evento para ampliar ancho al pasar mouse*/
+    width: 150px;
+    padding-left: 18px;
+    outline: none; /*Quitar bordes*/
+}
+/* Sección de contenido <section> y <article>*/
+#main{
+    grid-area: main;
+    border: 2px solid green;
+    border-radius: 22px;
+    max-width: 100%; /*Adaptar a cualquier dispositivo*/ 
+    height: auto; /*Adaptar a cualquier dispositivo*/
+    background-color: rgba(255, 255, 255, 0.6); /*Efecto glass*/
+    backdrop-filter: blur(5px); /*Efecto glass*/
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/* Sección esstilos <article> (iconos de escuelas incap) */
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: qpx solid black;
+    border-radius: 20px;
+}
+section article{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+/* Sección <aside> barra lateral */
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/*Sección estilo footer*/
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    clear: both; /*Elimina flotamiento parte superior*/
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5); /*Animación e agrandar el icono al pasar el mouse*/
+}
+/* Estilos a iconos fontawesome redes sociales */
+i[clas^="fa"]{
+    color: grey;
+    font-size: 18px;
+}
+i[class^="fab"]{
+    color: grey;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0px;
+}
